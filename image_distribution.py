@@ -5,16 +5,16 @@ import shutil
 # 52 images for training
 # 35 for testing
 # 35 for val
-training = 52
-testing = 35
-valing = 35
+training = 52 # change accordingly
+testing = 35 # change accordingly
+valing = 35 # change accordingly
 
 # /path/to/folder/A/
 # /path/to/folder/B/
 
 def distribution(num_images, dest_dir):
     # Path to the source directory
-    source_dir = '/Users/hannaqasim/Desktop/Face Detection J/data/pictures' # change accordingly
+    source_dir = 'insert_source_directory_path' # change accordingly
 
     # Get a list of all the image files in the source directory
     image_files = [os.path.join(source_dir, f) for f in os.listdir(source_dir) if os.path.isfile(os.path.join(source_dir, f)) and f.endswith((".jpg", ".png", ".gif", ".jpeg"))]
@@ -29,9 +29,9 @@ def distribution(num_images, dest_dir):
     return
     
 # distributing
-distribution(training, '/Users/hannaqasim/Desktop/Face Detection J/data/train/pictures') # change accordingly
-distribution(testing, '/Users/hannaqasim/Desktop/Face Detection J/data/test/pictures') # change accordingly
-distribution(valing, '/Users/hannaqasim/Desktop/Face Detection J/data/val/pictures') # change accordingly
+distribution(training, 'insert_data/train/pictures_ path') # change accordingly
+distribution(testing, 'insert_data/test/pictures_ path') # change accordingly
+distribution(valing, 'insert_data/val/pictures_ path') # change accordingly
 
 # moves the respective json files to the label files
 # credit: nicknochnack
